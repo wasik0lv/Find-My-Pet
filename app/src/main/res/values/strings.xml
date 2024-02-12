@@ -2,6 +2,7 @@
     <string name="app_name">Findmypet</string>
     <string name="title_home">Home</string>
     <string name="title_progression">Progression</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_petcard">Pet Card</string>
     <string name="title_doctor">Doctor</string>
+    <string name="title_account">Account</string>
 </resources>
