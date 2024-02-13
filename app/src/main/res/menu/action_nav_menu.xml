@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:icon="@drawable/scaner"
         android:title="QR Scanner"
-        app:showAsAction="always" />
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/tb_btn_chat"
@@ -16,5 +16,5 @@
         android:layout_height="wrap_content"
         android:icon="@drawable/chat"
         android:title="Chat"
-        app:showAsAction="always" />
+        app:showAsAction="always"/>
 </menu>
