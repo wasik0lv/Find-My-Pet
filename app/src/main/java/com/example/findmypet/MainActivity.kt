@@ -9,11 +9,14 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.findmypet.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.zxing.integration.android.IntentIntegrator
 
 //import kotlinx.coroutines.flow.internal.NoOpContinuation.context
 //import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
 class MainActivity : AppCompatActivity() {
+
+
 
     private lateinit var binding: ActivityMainBinding
 
@@ -72,6 +75,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun showScanner() {
         Toast.makeText(this, "this is scanner", Toast.LENGTH_SHORT).show()
+
+        val integrator = IntentIntegrator(this)
+        integrator.setPrompt("Scan a QR code")
+        integrator.setOrientationLocked(true) // Lock orientation to portrait
+        integrator.setBeepEnabled(true)
+        integrator.setBarcodeImageEnabled(true)
+        integrator.initiateScan()
     }
     private fun showChat() {
         Toast.makeText(this, "this is chat", Toast.LENGTH_SHORT).show()

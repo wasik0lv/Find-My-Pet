@@ -57,4 +57,6 @@ dependencies {
 //    qrcode scanner
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.google.zxing:core:3.4.1")
+    implementation("com.github.yuriy-budiyev:code-scanner:2.3.0")
 }
+
