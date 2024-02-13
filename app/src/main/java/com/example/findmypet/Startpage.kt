@@ -37,7 +37,7 @@ class Startpage : AppCompatActivity() {
 // เป็นการสั5งให้ทําการ start activity ส่วนของหน้า result
             startActivity(Intent(this@Startpage,
                 HomeFragment::class.java))
-            finish()
+
         }
 
 
