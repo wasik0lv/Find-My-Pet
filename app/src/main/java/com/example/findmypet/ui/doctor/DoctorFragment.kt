@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.findmypet.databinding.FragmentDoctorBinding
 
-
 class DoctorFragment : Fragment() {
+
     private var _binding: FragmentDoctorBinding? = null
 
     // This property is only valid between onCreateView and
@@ -22,10 +22,9 @@ class DoctorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val doctorViewModel =
-            ViewModelProvider(this).get(DoctorViewModel::class.java)
+        val doctorViewModel = ViewModelProvider(this).get(DoctorViewModel::class.java)
 
-        _binding =  FragmentDoctorBinding.inflate(inflater, container, false)
+        _binding = FragmentDoctorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDoctor
