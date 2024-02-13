@@ -18,15 +18,21 @@
         tools:layout="@layout/fragment_progression" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.findmypet.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_petcard"
+        android:name="com.example.findmypet.ui.petcard.PetcardFragment"
+        android:label="@string/title_petcard"
+        tools:layout="@layout/fragment_petcard" />
 
     <fragment
         android:id="@+id/navigation_doctor"
         android:name="com.example.findmypet.ui.doctor.DoctorFragment"
         android:label="@string/title_doctor"
         tools:layout="@layout/fragment_doctor" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.findmypet.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
 
 </navigation>
