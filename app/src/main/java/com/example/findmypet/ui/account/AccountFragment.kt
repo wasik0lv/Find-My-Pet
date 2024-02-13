@@ -1,4 +1,4 @@
-package com.example.findmypet.ui.doctor
+package com.example.findmypet.ui.account
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.findmypet.databinding.FragmentDoctorBinding
+import com.example.findmypet.databinding.FragmentAccountBinding
 
-class DoctorFragment : Fragment() {
-
-    private var _binding: FragmentDoctorBinding? = null
+class AccountFragment : Fragment() {
+    private var _binding: FragmentAccountBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,13 +21,14 @@ class DoctorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val doctorViewModel = ViewModelProvider(this).get(DoctorViewModel::class.java)
+        val accountViewModel =
+            ViewModelProvider(this).get(AccountViewModel::class.java)
 
-        _binding = FragmentDoctorBinding.inflate(inflater, container, false)
+        _binding = FragmentAccountBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDoctor
-        doctorViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textAccount
+        accountViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
@@ -38,4 +38,5 @@ class DoctorFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }
